@@ -10,16 +10,23 @@ const HomePage = () => {
         const { query } = useSelector((store) => store.search)
         const dispatch = useDispatch()
         const searches = ['Nature', 'Fashion', 'Travel', 'Food', 'Architecture', 'Cars', 'Space', 'Abstract']
+        const previewImages = [
+          'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80'
+        ]
 
 
   return (
     <div>
       {query != '' ? <div> <Tabs />
       <ResultGrid /> </div> : 
-      <div className='min-h-[75vh] flex items-center justify-center px-5'>
-        <div className='max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center'>
+      <div className='h-[calc(100vh-88px)] overflow-hidden flex items-center justify-center px-5'>
+        <div className='max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center'>
           <div>
-            <h1 className='text-5xl md:text-7xl font-black text-[#0D330E] leading-tight'>
+            <h1 className='text-5xl md:text-6xl font-black text-[#0D330E] leading-tight'>
               Explore visuals that match your mood.
             </h1>
 
@@ -48,13 +55,17 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <div className='grid grid-cols-3 gap-4 h-[440px]'>
-            <div className='rounded-3xl bg-[#6E8649] mt-16'></div>
-            <div className='rounded-3xl bg-[#477023] mb-20'></div>
-            <div className='rounded-3xl bg-[#2D531A] mt-8'></div>
-            <div className='rounded-3xl bg-[#0D330E] mb-10'></div>
-            <div className='rounded-3xl bg-[#6E8649] mt-24'></div>
-            <div className='rounded-3xl bg-[#477023] mb-24'></div>
+          <div className='relative hidden md:block h-[500px]'>
+            <img className='absolute left-0 top-14 h-72 w-52 rounded-3xl object-cover shadow-xl' src={previewImages[0]} alt='nature preview' />
+            <img className='absolute left-44 top-0 h-60 w-48 rounded-3xl object-cover shadow-xl' src={previewImages[1]} alt='fashion preview' />
+            <img className='absolute right-8 top-20 h-80 w-56 rounded-3xl object-cover shadow-xl' src={previewImages[2]} alt='travel preview' />
+            <img className='absolute left-24 bottom-0 h-52 w-60 rounded-3xl object-cover shadow-xl' src={previewImages[3]} alt='creative preview' />
+            <img className='absolute right-32 bottom-10 h-48 w-44 rounded-3xl object-cover shadow-xl' src={previewImages[4]} alt='space preview' />
+
+            <div className='absolute left-36 top-56 bg-white/95 shadow-2xl rounded-3xl p-5 border border-[#2D531A]'>
+              <h2 className='text-2xl font-black text-[#0D330E]'>Photos + Videos</h2>
+              <p className='text-[#477023] mt-1'>One search. One visual feed.</p>
+            </div>
           </div>
         </div>
       </div>}
