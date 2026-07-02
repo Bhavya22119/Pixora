@@ -10,14 +10,6 @@ const HomePage = () => {
         const { query } = useSelector((store) => store.search)
         const dispatch = useDispatch()
         const searches = ['Nature', 'Fashion', 'Travel', 'Food', 'Architecture', 'Cars', 'Space', 'Abstract']
-        const previewImages = [
-          'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80'
-        ]
 
 
   return (
@@ -56,13 +48,16 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <div className='hidden md:grid grid-cols-3 gap-4 h-[500px]'>
-            <img className='h-72 w-full rounded-3xl object-cover shadow-xl mt-16' src={previewImages[0]} alt='green landscape preview' />
-            <img className='h-60 w-full rounded-3xl object-cover shadow-xl' src={previewImages[1]} alt='soft light preview' />
-            <img className='h-80 w-full rounded-3xl object-cover shadow-xl mt-10' src={previewImages[2]} alt='travel road preview' />
-            <img className='h-56 w-full rounded-3xl object-cover shadow-xl' src={previewImages[3]} alt='sunrise preview' />
-            <img className='h-72 w-full rounded-3xl object-cover shadow-xl mt-20' src={previewImages[4]} alt='night sky preview' />
-            <img className='h-60 w-full rounded-3xl object-cover shadow-xl' src={previewImages[5]} alt='calm valley preview' />
+          <div className='hidden md:flex justify-center'>
+            <div className='relative h-[500px] w-[380px] rounded-[38px] overflow-hidden bg-[#071E07] shadow-[0_30px_90px_rgba(13,51,14,0.28)] border border-[#DCE5D2]'>
+              <img 
+                className='h-full w-full object-cover opacity-95'
+                src='/pixora-home-bg.jpg'
+                alt='Pixora floral visual preview'
+              />
+              <div className='absolute inset-0 bg-gradient-to-t from-[#071E07]/35 via-transparent to-white/10'></div>
+              <div className='absolute inset-4 rounded-[30px] border border-white/20'></div>
+            </div>
           </div>
         </div>
       </div>}
