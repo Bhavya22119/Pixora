@@ -1,11 +1,11 @@
 # Pixora
 
-Pixora is a Pinterest-inspired media search app for discovering photos and videos in one clean feed. Search once and Pixora shows mixed photo and video results together, with filter tabs when you want to view only photos or only videos.
+Pixora is a media discovery app for exploring photos and videos in one clean visual feed. Search once and Pixora shows mixed photo and video results together, with filter tabs when you want to view only photos or only videos.
 
 ## Features
 
 - Mixed photo and video search results
-- Pinterest-style masonry layout
+- Responsive masonry layout
 - Infinite scroll with lazy loading
 - Hover preview with title, save action, soft dimming, zoom, and green glow
 - Large detail preview before opening the original source
