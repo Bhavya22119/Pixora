@@ -18,7 +18,7 @@ const HomePage = () => {
       <ResultGrid /> </div> : 
       <div 
         className='h-[calc(100vh-88px)] overflow-hidden flex items-center justify-center px-5 bg-cover bg-center relative'
-        style={{ backgroundImage: "url('/pixora-front-bg.png')" }}
+        style={{ backgroundImage: "url('/pixora-front-bg.jpg')" }}
       >
         <div className='absolute inset-0 bg-black/35'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(13,51,14,0.25),rgba(0,0,0,0.72))]'></div>
