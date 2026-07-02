@@ -7,12 +7,9 @@ Pixora is a media discovery app for exploring photos and videos in one clean vis
 - Mixed photo and video search results
 - Responsive masonry layout
 - Infinite scroll with lazy loading
-- Hover preview with title, save action, soft dimming, zoom, and green glow
-- Large detail preview before opening the original source
 - Download, save, and original-link actions from the preview
 - Local collection saved in the browser
 - Remove saved items from the collection
-- Clean white UI with deep green accents
 
 ## Tech Stack
 
