@@ -19,7 +19,13 @@ const searchbar = () => {
 
   return (
     <div className='sticky top-0 z-50 flex items-center gap-4 p-4 bg-white shadow'>
-      <Link to='/' >
+      <Link 
+        to='/'
+        onClick={() => {
+          setText('')
+          dispatch(setQuery(''))
+        }}
+      >
         <span className='text-4xl font-black text-[#0D330E]'>Pixora</span>
       </Link>
 

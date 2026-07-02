@@ -12,10 +12,11 @@ const HomePage = () => {
         const searches = ['Nature', 'Fashion', 'Travel', 'Food', 'Architecture', 'Cars', 'Space', 'Abstract']
         const previewImages = [
           'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=500&q=80',
           'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80',
-          'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80'
+          'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80',
+          'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80'
         ]
 
 
@@ -55,17 +56,13 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <div className='relative hidden md:block h-[500px]'>
-            <img className='absolute left-0 top-14 h-72 w-52 rounded-3xl object-cover shadow-xl' src={previewImages[0]} alt='nature preview' />
-            <img className='absolute left-44 top-0 h-60 w-48 rounded-3xl object-cover shadow-xl' src={previewImages[1]} alt='fashion preview' />
-            <img className='absolute right-8 top-20 h-80 w-56 rounded-3xl object-cover shadow-xl' src={previewImages[2]} alt='travel preview' />
-            <img className='absolute left-24 bottom-0 h-52 w-60 rounded-3xl object-cover shadow-xl' src={previewImages[3]} alt='creative preview' />
-            <img className='absolute right-32 bottom-10 h-48 w-44 rounded-3xl object-cover shadow-xl' src={previewImages[4]} alt='space preview' />
-
-            <div className='absolute left-36 top-56 bg-white/95 shadow-2xl rounded-3xl p-5 border border-[#2D531A]'>
-              <h2 className='text-2xl font-black text-[#0D330E]'>Photos + Videos</h2>
-              <p className='text-[#477023] mt-1'>One search. One visual feed.</p>
-            </div>
+          <div className='hidden md:grid grid-cols-3 gap-4 h-[500px]'>
+            <img className='h-72 w-full rounded-3xl object-cover shadow-xl mt-16' src={previewImages[0]} alt='green landscape preview' />
+            <img className='h-60 w-full rounded-3xl object-cover shadow-xl' src={previewImages[1]} alt='soft light preview' />
+            <img className='h-80 w-full rounded-3xl object-cover shadow-xl mt-10' src={previewImages[2]} alt='travel road preview' />
+            <img className='h-56 w-full rounded-3xl object-cover shadow-xl' src={previewImages[3]} alt='sunrise preview' />
+            <img className='h-72 w-full rounded-3xl object-cover shadow-xl mt-20' src={previewImages[4]} alt='night sky preview' />
+            <img className='h-60 w-full rounded-3xl object-cover shadow-xl' src={previewImages[5]} alt='calm valley preview' />
           </div>
         </div>
       </div>}
